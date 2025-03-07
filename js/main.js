@@ -6,32 +6,32 @@ const skills = {
         {
             name: 'HTML5/CSS3',
             level: 90,
-            description: 'Semântica avançada, SEO, Flexbox, Grid, Responsive Design, Acessibilidade',
+            description: 'HTML semântico, SEO técnico, Flexbox, Grid, Design responsivo e acessível',
             icon: 'fas fa-code'
         },
         {
             name: 'TailwindCSS',
-            level: 85,
-            description: 'Utility-first CSS, Componentes reutilizáveis, Design System, Customização',
-            icon: 'fab fa-css3-alt'
+            level: 70,
+            description: 'Estilização ágil, design responsivo e componentes reutilizáveis',
+            icon: 'fas fa-wind'
         },
         {
             name: 'JavaScript',
             level: 80,
-            description: 'ES6+, DOM, Async/Await, APIs',
+            description: 'Interfaces interativas, manipulação do DOM, consumo de APIs',
             icon: 'fab fa-js'
         }
     ],
     backend: [
         {
             name: 'PHP',
-            level: 90,
-            description: 'Laravel, POO, MVC, APIs RESTful',
+            level: 85,
+            description: 'POO, MVC, Laravel',
             icon: 'fab fa-php'
         },
         {
             name: 'MySQL',
-            level: 85,
+            level: 80,
             description: 'Queries complexas, Otimização, Modelagem',
             icon: 'fas fa-database'
         },
@@ -45,12 +45,12 @@ const skills = {
     languages: [
         {
             name: 'Inglês',
-            level: 75,
+            level: 60,
             description: 'B2 - Intermediário (CEFR: 56)',
             details: {
                 conversation: 'B1 - Intermediário',
                 reading: 'C2 - Avançado',
-                writing: 'B2 - Intermediário'
+                writing: 'C1 - Avançado'
             },
             icon: 'fas fa-language'
         }
