@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emilly Waiandt - Desenvolvedora Web Full Stack</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">EW</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#testimonials">Depoimentos</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+        <div class="menu-btn">
+            <div class="menu-btn__burger"></div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Desenvolvedora Web Full Stack</h1>
+                <div class="typing-text">Criando Soluções Inteligentes com</div>
+                <div class="tech-stack" id="techStack"></div>
+                <p>Transformo ideias em produtos digitais incríveis</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary">Veja Meus Projetos</a>
+                    <a href="#contact" class="btn secondary">Entre em Contato</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 class="purple-title">Quem Sou Eu</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Desenvolvedora Web Full Stack, com foco em Back-End apaixonada por construir soluções modernas e eficientes.</p>
+                    <p>Minha missão é criar experiências digitais de alta qualidade que atendam às necessidades de usuários e empresas.</p>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <h3>HTML5/CSS3</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h3>JavaScript</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h3>PHP/Laravel</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h3>MySQL</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>Projetos Desenvolvidos</h2>
+            <div class="projects-grid">
+                <!-- Project cards will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <section id="expertise" class="expertise">
+            <h2>Por Que Me Escolher</h2>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Tecnologias Modernas</h3>
+                    <p>PHP, SQL, TailwindCSS e mais</p>
+                </div>
+                <div class="expertise-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Experiência Prática</h3>
+                    <p>Desenvolvimento de sistemas complexos</p>
+                </div>
+                <div class="expertise-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Foco no Cliente</h3>
+                    <p>Soluções personalizadas</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <h2>O Que Dizem Sobre Mim</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <p>"Emilly é uma profissional incrível. O sistema de estoque que ela desenvolveu para nós trouxe uma eficiência sem igual."</p>
+                    <cite>- Oh! Rainha</cite>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Entre em Contato</h2>
+            <div class="contact-container">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder=" " required>
+                        <label for="name">Nome</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder=" " required>
+                        <label for="email">E-mail</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder=" " required></textarea>
+                        <label for="message">Mensagem</label>
+                    </div>
+                    <button type="submit" class="btn primary">Enviar Mensagem</button>
+                </form>
+                <div class="contact-info">
+                    <div class="social-links">
+                        <a href="mailto:emillywaiandt@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/3mil1y" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/emilly-waiandt" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#projects">Meus Projetos</a>
+                <a href="https://github.com/3mil1y" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/emilly-waiandt" target="_blank">LinkedIn</a>
+            </div>
+            <p>&copy; 2024 Emilly Waiandt. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
