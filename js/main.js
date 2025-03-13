@@ -6,7 +6,7 @@ const skills = {
         {
             name: 'HTML5/CSS3',
             level: 90,
-            description: 'HTML semântico, SEO técnico, Flexbox, Grid, Design responsivo e acessível',
+            description: 'HTML semântico, Flexbox, Grid, Design responsivo e acessível',
             icon: 'fas fa-code'
         },
         {
