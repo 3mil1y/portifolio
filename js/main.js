@@ -338,6 +338,27 @@ function loadSkills() {
 
 setupContactForm();
 
+// Contact form handling
+// function setupContactForm() {
+//     const form = document.getElementById('contactForm');
+//     if (!form) return;
+    
+//     form.addEventListener('submit', async (e) => {
+//         e.preventDefault();
+        
+//         const formData = new FormData(form);
+//         const data = Object.fromEntries(formData);
+        
+//         try {
+//             console.log('Form submitted:', data);
+//             showNotification('Mensagem enviada com sucesso!', 'success');
+//             form.reset();
+//         } catch (error) {
+//             showNotification('Erro ao enviar mensagem. Tente novamente.', 'error');
+//         }
+//     }); 
+// }
+
 }
 
 // Notification system
