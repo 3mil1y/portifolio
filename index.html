@@ -120,21 +120,29 @@
         <section id="contact" class="contact">
             <h2>Entre em Contato</h2>
             <div class="contact-container">
-                <form id="contactForm" action="https://formsubmit.co/emillywaiandt@gmail.com" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder=" " required>
-                        <label for="name">Nome</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder=" " required>
-                        <label for="email">E-mail</label>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" placeholder=" " required></textarea>
-                        <label for="message">Mensagem</label>
-                    </div>
-                    <button type="submit" class="btn primary">Enviar Mensagem</button>
-                </form>
+            <form id="contactForm" action="https://formsubmit.co/emillywaiandt@gmail.com" method="POST" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder=" " required>
+                    <label for="name">Nome</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">E-mail</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder=" " required></textarea>
+                    <label for="message">Mensagem</label>
+                </div>
+            
+                <!-- Opcional: Desativar CAPTCHA -->
+<!--                 <input type="hidden" name="_captcha" value="false"> -->
+            
+                <!-- Opcional: Redirecionamento pós-envio -->
+<!--                 <input type="hidden" name="_next" value="https://seusite.com/obrigado.html"> -->
+            
+                <button type="submit" class="btn primary">Enviar Mensagem</button>
+            </form>
+
                 <div class="contact-info">
                     <div class="social-links">
                         <a href="mailto:emillywaiandt@gmail.com"><i class="fas fa-envelope"></i></a>
