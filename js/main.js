@@ -308,23 +308,37 @@ function loadSkills() {
 
 // Contact form handling
 function setupContactForm() {
+    function setupContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
-    
+
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
+
         const formData = new FormData(form);
-        const data = Object.fromEntries(formData);
         
         try {
-            console.log('Form submitted:', data);
-            showNotification('Mensagem enviada com sucesso!', 'success');
-            form.reset();
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: formData
+            });
+
+            if (response.ok) {
+                console.log('Form submitted successfully');
+                showNotification('Mensagem enviada com sucesso!', 'success');
+                form.reset();
+            } else {
+                throw new Error('Erro no envio');
+            }
         } catch (error) {
+            console.error('Error submitting form:', error);
             showNotification('Erro ao enviar mensagem. Tente novamente.', 'error');
         }
     });
+}
+
+setupContactForm();
+
 }
 
 // Notification system
