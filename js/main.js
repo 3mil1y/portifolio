@@ -307,7 +307,6 @@ function loadSkills() {
 }
 
 // Contact form handling
-function setupContactForm() {
     function setupContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
