@@ -307,36 +307,36 @@ function loadSkills() {
 }
 
 // Contact form handling
-    function setupContactForm() {
-    const form = document.getElementById('contactForm');
-    if (!form) return;
+//     function setupContactForm() {
+//     const form = document.getElementById('contactForm');
+//     if (!form) return;
 
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
+//     form.addEventListener('submit', async (e) => {
+//         e.preventDefault();
 
-        const formData = new FormData(form);
+//         const formData = new FormData(form);
         
-        try {
-            const response = await fetch(form.action, {
-                method: form.method,
-                body: formData
-            });
+//         try {
+//             const response = await fetch(form.action, {
+//                 method: form.method,
+//                 body: formData
+//             });
 
-            if (response.ok) {
-                console.log('Form submitted successfully');
-                showNotification('Mensagem enviada com sucesso!', 'success');
-                form.reset();
-            } else {
-                throw new Error('Erro no envio');
-            }
-        } catch (error) {
-            console.error('Error submitting form:', error);
-            showNotification('Erro ao enviar mensagem. Tente novamente.', 'error');
-        }
-    });
-}
+//             if (response.ok) {
+//                 console.log('Form submitted successfully');
+//                 showNotification('Mensagem enviada com sucesso!', 'success');
+//                 form.reset();
+//             } else {
+//                 throw new Error('Erro no envio');
+//             }
+//         } catch (error) {
+//             console.error('Error submitting form:', error);
+//             showNotification('Erro ao enviar mensagem. Tente novamente.', 'error');
+//         }
+//     });
+// }
 
-setupContactForm();
+// setupContactForm();
 
 // Contact form handling
 // function setupContactForm() {
@@ -362,24 +362,24 @@ setupContactForm();
 }
 
 // Notification system
-function showNotification(message, type) {
-    const notification = document.createElement('div');
-    notification.className = `notification ${type}`;
-    notification.textContent = message;
+// function showNotification(message, type) {
+//     const notification = document.createElement('div');
+//     notification.className = `notification ${type}`;
+//     notification.textContent = message;
     
-    document.body.appendChild(notification);
+//     document.body.appendChild(notification);
     
-    setTimeout(() => {
-        notification.classList.add('show');
-    }, 100);
+//     setTimeout(() => {
+//         notification.classList.add('show');
+//     }, 100);
     
-    setTimeout(() => {
-        notification.classList.remove('show');
-        setTimeout(() => {
-            notification.remove();
-        }, 300);
-    }, 3000);
-}
+//     setTimeout(() => {
+//         notification.classList.remove('show');
+//         setTimeout(() => {
+//             notification.remove();
+//         }, 300);
+//     }, 3000);
+// }
 
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
