@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadProjects();
     loadSkills();
     setupMobileMenu();
-    setupContactForm();
+    // setupContactForm();
     setupActiveNavigation();
 });
 
