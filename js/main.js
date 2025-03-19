@@ -359,7 +359,7 @@ function loadSkills() {
 //     }); 
 // }
 
-}
+// }
 
 Notification system
 function showNotification(message, type) {
