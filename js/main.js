@@ -361,7 +361,7 @@ function loadSkills() {
 
 // }
 
-Notification system
+// Notification system
 function showNotification(message, type) {
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
