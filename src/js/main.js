@@ -167,23 +167,36 @@ const projects = [
     {
         title: 'FastStok',
         description: 'Sistema de controle de estoque com interface intuitiva e relatórios dinâmicos.',
-        image: 'assets/projects/faststok.jpg',
-        fallbackImage: 'assets/projects/default.jpg',
-        tech: ['PHP', 'SQL', 'JavaScript', 'TailwindCSS']
+        image: 'src/assets/projects/faststok.jpg',
+        fallbackImage: 'src/assets/projects/default.jpg',
+        tech: ['PHP', 'SQL', 'JavaScript', 'TailwindCSS'],
+        company: 'Nater Coop',
+        link: 'https://faststok.natercoop.com.br'
     },
     {
         title: 'Café Pomerano',
         description: 'Site institucional da empresa café pomerano.',
-        image: 'assets/projects/cafe-pomerano.jpg',
-        fallbackImage: 'assets/projects/default.jpg',
-        tech: ['PHP', 'SQL']
+        image: 'src/assets/projects/cafe-pomerano.jpg',
+        fallbackImage: 'src/assets/projects/default.jpg',
+        tech: ['PHP', 'SQL'],
+        company: 'Café Pomerano'
     },
+    // {
+    //     title: 'Oh! Rainha',
+    //     description: 'Site institucional da empresa Oh! Rainha.',
+    //     image: 'src/assets/projects/oh-rainha.jpg',
+    //     fallbackImage: 'src/assets/projects/default.jpg',
+    //     tech: ['HTML', 'CSS', 'JavaScript'],
+    //     company: 'Oh! Rainha'
+    // },
     {
-        title: 'Oh! Rainha',
-        description: 'Site institucional da empresa Oh! Rainha.',
-        image: 'assets/projects/oh-rainha.jpg',
-        fallbackImage: 'assets/projects/default.jpg',
-        tech: ['HTML', 'CSS', 'JavaScript']
+        title: 'Cantareira Pilates',
+        description: 'Site institucional da empresa Cantareira Pilates.',
+        image: 'src/assets/projects/cantareira.png',
+        fallbackImage: 'src/assets/projects/default.jpg',
+        tech: ['HTML', 'CSS', 'JavaScript'],
+        company: 'Publitiva',
+        link: 'https://cantareirapilates.com.br'
     }
 ];
 
@@ -209,6 +222,18 @@ function loadProjects() {
             <div class="project-content">
                 <h3>${project.title}</h3>
                 <p>${project.description}</p>
+                <div class="project-info-row">
+                    <div class="project-company">
+                        <i class="fas fa-building"></i>
+                        <span>${project.company}</span>
+                    </div>
+                    ${project.link ? `
+                        <a href="${project.link}" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Ver Projeto
+                        </a>
+                    ` : ''}
+                </div>
                 <div class="project-tech">
                     ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
                 </div>
@@ -307,34 +332,34 @@ function loadSkills() {
 }
 
 // Contact form handling
-//     function setupContactForm() {
-//     const form = document.getElementById('contactForm');
-//     if (!form) return;
+    function setupContactForm() {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
 
-//     form.addEventListener('submit', async (e) => {
-//         e.preventDefault();
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
 
-//         const formData = new FormData(form);
+        const formData = new FormData(form);
         
-//         try {
-//             const response = await fetch(form.action, {
-//                 method: form.method,
-//                 body: formData
-//             });
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: formData
+            });
 
-//             if (response.ok) {
-//                 console.log('Form submitted successfully');
-//                 showNotification('Mensagem enviada com sucesso!', 'success');
-//                 form.reset();
-//             } else {
-//                 throw new Error('Erro no envio');
-//             }
-//         } catch (error) {
-//             console.error('Error submitting form:', error);
-//             showNotification('Erro ao enviar mensagem. Tente novamente.', 'error');
-//         }
-//     });
-// }
+            if (response.ok) {
+                console.log('Form submitted successfully');
+                showNotification('Mensagem enviada com sucesso!', 'success');
+                form.reset();
+            } else {
+                throw new Error('Erro no envio');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            showNotification('Erro ao enviar mensagem. Tente novamente.', 'error');
+        }
+    });
+}
 
 // setupContactForm();
 
