@@ -167,20 +167,20 @@ const projects = [
     {
         title: 'FastStok',
         description: 'Sistema de controle de estoque com interface intuitiva e relatórios dinâmicos.',
-        image: 'src/assets/projects/faststok.jpg',
+        image: 'src/assets/projects/faststok.png',
         fallbackImage: 'src/assets/projects/default.jpg',
         tech: ['PHP', 'SQL', 'JavaScript', 'TailwindCSS'],
-        company: 'Nater Coop',
-        link: 'https://faststok.natercoop.com.br'
+        company: 'Autônomo',
+        link: 'https://github.com/3mil1y/faststok.git'
     },
-    {
-        title: 'Café Pomerano',
-        description: 'Site institucional da empresa café pomerano.',
-        image: 'src/assets/projects/cafe-pomerano.jpg',
-        fallbackImage: 'src/assets/projects/default.jpg',
-        tech: ['PHP', 'SQL'],
-        company: 'Café Pomerano'
-    },
+    // {
+    //     title: 'Café Pomerano',
+    //     description: 'Site institucional da empresa café pomerano.',
+    //     image: 'src/assets/projects/cafe-pomerano.jpg',
+    //     fallbackImage: 'src/assets/projects/default.jpg',
+    //     tech: ['PHP', 'SQL'],
+    //     company: 'Café Pomerano'
+    // },
     // {
     //     title: 'Oh! Rainha',
     //     description: 'Site institucional da empresa Oh! Rainha.',
