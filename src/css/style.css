@@ -901,4 +901,147 @@ img {
 
 .menu-btn.open .menu-btn__burger::after {
     transform: rotate(-45deg);
+}
+
+/* Case Study Section */
+.case-study {
+    padding: 5rem 5%;
+    background-color: var(--surface);
+}
+
+.case-study h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.case-study-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--background);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.case-study-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.case-study-header h3 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.case-study-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.case-study-details {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.case-study-tech, .case-study-features {
+    background-color: var(--surface);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.case-study-tech h4, .case-study-features h4 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.case-study-tech ul, .case-study-features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.case-study-tech li, .case-study-features li {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.case-study-tech li::before, .case-study-features li::before {
+    content: "•";
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+}
+
+.case-study-architecture {
+    background-color: var(--surface);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.case-study-architecture h4 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.case-study-architecture p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.architecture-benefits {
+    margin: 1.5rem 0;
+}
+
+.architecture-benefits h5 {
+    color: var(--text);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.architecture-benefits ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.architecture-benefits li {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.architecture-benefits li::before {
+    content: "→";
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+}
+
+.case-study-conclusion {
+    font-style: italic;
+    color: var(--text);
+    border-left: 3px solid var(--primary);
+    padding-left: 1rem;
+}
+
+/* Responsive adjustments for case study */
+@media (max-width: 768px) {
+    .case-study-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .case-study-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .case-study-content {
+        padding: 1.5rem;
+    }
 } 
