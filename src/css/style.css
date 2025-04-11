@@ -117,7 +117,7 @@ body {
     max-width: 800px;
 }
 
-.hero h1 {
+.hero h1, .hero h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
     animation: fadeInUp 1s ease;
