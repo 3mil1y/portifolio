@@ -197,6 +197,42 @@ const projects = [
         tech: ['HTML', 'CSS', 'JavaScript'],
         company: 'Publitiva',
         link: 'https://cantareirapilates.com.br'
+    },
+    {
+        title: 'Info From Sky',
+        description: 'Site institucional da empresa Info From Sky.',
+        image: 'src/assets/projects/ifsky.png',
+        fallbackImage: 'src/assets/projects/default.jpg',
+        tech: ['HTML', 'CSS', 'JavaScript'],
+        company: 'Publitiva',
+        link: 'https://ifsky.com.br/'
+    },
+    {
+        title: 'NBA Adv',
+        description: 'Site Institucional da Advogada Niver Bosle Acosta.',
+        image: 'src/assets/projects/nba-adv.png',
+        fallbackImage: 'src/assets/projects/default.jpg',
+        tech: ['HTML', 'CSS', 'JavaScript'],
+        company: 'Publitiva | Niver B. Acosta',
+        link: 'https://niverb-acosta.com.br'
+    },
+    {
+        title: 'Niver Concilia',
+        description: 'Site da Advogada Niver Bosle Acosta, focado em acordos de conciliação.',
+        image: 'src/assets/projects/nba-concilia.png',
+        fallbackImage: 'src/assets/projects/default.jpg',
+        tech: ['HTML', 'CSS', 'TailwindCSS', 'JavaScript'],
+        company: 'Publitiva | Niver B. Acosta',
+        link: 'https://niverb-acosta.com.br'
+    },
+    {
+        title: 'NBA Cursos',
+        description: 'Site da Advogada Niver Bosle Acosta, focado em seus cursos de advocacia.',
+        image: 'src/assets/projects/nba-cursos.png',
+        fallbackImage: 'src/assets/projects/default.jpg',
+        tech: ['HTML', 'CSS', 'TailwindCSS', 'JavaScript'],
+        company: 'Publitiva | Niver B. Acosta',
+        link: 'https://niverb-acosta.com.br'
     }
 ];
 
