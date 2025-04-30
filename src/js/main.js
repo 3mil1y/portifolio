@@ -1,4 +1,4 @@
-console.log('JavaScript carregado com sucesso!');
+//console.log('JavaScript carregado com sucesso!');
 
 // Skills data
 const skills = {
@@ -206,6 +206,15 @@ const projects = [
         tech: ['HTML', 'CSS', 'JavaScript'],
         company: 'Publitiva',
         link: 'https://ifsky.com.br/'
+    },
+    {
+        title: 'Maxx Prêmios',
+        description: 'Site de premiação da empresa Maxx TheraSkin.',
+        image: 'src/assets/projects/maxx.png',
+        fallbackImage: 'src/assets/projects/default.jpg',
+        tech: ['Laravel', 'MySQL', 'TailwindCSS', 'JavaScript'],
+        company: 'Publitiva'
+        // link: 'https://maxxtheraskin.com.br/'
     },
     {
         title: 'NBA Adv',
