@@ -1,0 +1,340 @@
+/* Estilos para o carrossel e paginação */
+:root {
+    --carousel-button-size: 44px;
+    --carousel-indicator-size: 12px;
+    --carousel-indicator-active-size: 14px;
+    --carousel-transition-duration: 0.5s;
+}
+
+/* Container do carrossel */
+.projects-carousel {
+    display: none; /* Inicialmente escondido, será mostrado apenas em mobile */
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 40px;
+    overflow: hidden;
+    padding: 20px 0 40px;
+    box-sizing: border-box;
+}
+
+/* Container dos slides */
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* Estilo de cada slide */
+.carousel-slide {
+    min-width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+}
+
+/* Botões de navegação */
+.carousel-button {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    color: white;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    width: var(--carousel-button-size);
+    height: var(--carousel-button-size);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.3s ease;
+}
+
+.carousel-button:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.carousel-button i {
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+}
+
+.carousel-button:hover i {
+    transform: scale(1.2);
+}
+
+.carousel-button:hover {
+    background: var(--primary);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+}
+
+.carousel-button.prev {
+    left: 15px;
+}
+
+.carousel-button.next {
+    right: 15px;
+}
+
+/* Indicadores de slide */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin: 25px 10px 0;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    position: relative;
+    z-index: 5;
+}
+
+.carousel-indicator {
+    width: var(--carousel-indicator-size);
+    height: var(--carousel-indicator-size);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid transparent;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-indicator::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50%;
+}
+
+.carousel-indicator:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+.carousel-indicator.active {
+    background: var(--primary);
+    transform: scale(1.2);
+    border-color: white;
+    box-shadow: 0 0 0 2px var(--primary);
+    animation: pulse 2s infinite;
+}
+
+.carousel-indicator.active::before {
+    opacity: 1;
+    animation: indicatorProgress 10s linear forwards;
+}
+
+@keyframes indicatorProgress {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7); }
+    70% { box-shadow: 0 0 0 6px rgba(139, 92, 246, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
+}
+
+/* Paginação para desktop */
+.pagination-desktop {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.projects-pagination {
+    display: inline-flex;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}
+
+.pagination-button {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    min-width: 40px;
+    height: 40px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.pagination-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--primary);
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.pagination-button:hover:not(.active) {
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
+}
+
+.pagination-button:hover:not(.active)::before {
+    width: 100%;
+}
+
+.pagination-button.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+    transform: translateY(-2px);
+}
+
+.pagination-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.5);
+}
+
+/* Efeito de onda ao clicar */
+.pagination-button:active {
+    transform: translateY(0);
+    transition: transform 0.1s ease;
+}
+
+/* Responsividade para botões de paginação */
+@media (max-width: 480px) {
+    .pagination-button {
+        min-width: 36px;
+        height: 36px;
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .projects-carousel {
+        display: block; /* Mostra o carrossel em telas menores */
+        margin-bottom: 30px;
+    }
+    
+    .projects-grid {
+        display: none; /* Esconde o grid em telas menores */
+    }
+    
+    .pagination-desktop {
+        display: none; /* Esconde a paginação em telas menores */
+    }
+    
+    .carousel-button {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+    }
+    
+    .carousel-indicator {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.carousel-slide {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Ajustes para acessibilidade */
+.carousel-button:focus-visible,
+.pagination-button:focus-visible,
+.carousel-indicator:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Melhorias para dispositivos touch */
+@media (hover: none) {
+    .carousel-button {
+        background: transparent;
+        border: none;
+        width: 44px;
+        height: 44px;
+    }
+    
+    .pagination-button {
+        padding: 10px 16px;
+    }
+}
+
+.pagination-button:hover,
+.pagination-button.active {
+    background: var(--primary);
+    color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .projects-grid {
+        display: none; /* Esconde a grid em mobile */
+    }
+    
+    .projects-carousel {
+        display: block; /* Mostra o carrossel em mobile */
+    }
+    
+    .pagination-desktop {
+        display: none; /* Esconde a paginação em mobile */
+    }
+}
+
+/* Estilo para desktop */
+@media (min-width: 769px) {
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .projects-pagination {
+        display: flex;
+    }
+    
+    .carousel-button,
+    .carousel-indicators {
+        display: none;
+    }
+}
