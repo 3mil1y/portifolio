@@ -1,66 +1,16 @@
-//console.log('JavaScript carregado com sucesso!');
+import skills from '/src/data/skills.js';
+import techStack from '/src/data/stack.js';
+import projects from '/src/data/projects.js';
 
-// Skills data
-const skills = {
-    frontend: [
-        {
-            name: 'HTML5/CSS3',
-            level: 90,
-            description: 'HTML semântico, Flexbox, Grid, Design responsivo e acessível',
-            icon: 'fas fa-code'
-        },
-        {
-            name: 'TailwindCSS',
-            level: 70,
-            description: 'Estilização ágil, design responsivo e componentes reutilizáveis',
-            icon: 'fas fa-wind'
-        },
-        {
-            name: 'JavaScript',
-            level: 80,
-            description: 'Interfaces interativas, manipulação do DOM, consumo de APIs',
-            icon: 'fab fa-js'
-        }
-    ],
-    backend: [
-        {
-            name: 'PHP',
-            level: 85,
-            description: 'POO, MVC, Laravel',
-            icon: 'fab fa-php'
-        },
-        {
-            name: 'MySQL',
-            level: 80,
-            description: 'Queries complexas, Otimização, Modelagem',
-            icon: 'fas fa-database'
-        },
-        {
-            name: 'Git',
-            level: 80,
-            description: 'Versionamento, Branches, Git Flow',
-            icon: 'fab fa-git-alt'
-        }
-    ],
-    languages: [
-        {
-            name: 'Inglês',
-            level: 60,
-            description: 'B2 - Intermediário (CEFR: 56)',
-            details: {
-                conversation: 'B1 - Intermediário',
-                reading: 'C2 - Avançado',
-                writing: 'C1 - Avançado'
-            },
-            icon: 'fas fa-language'
-        }
-    ]
-};
+// Make functions available globally
+window.typeText = typeText;
+window.loadProjects = loadProjects;
+window.loadSkills = loadSkills;
+window.setupMobileMenu = setupMobileMenu;
+window.setupActiveNavigation = setupActiveNavigation;
 
 // Start animations when page loads
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM carregado, iniciando animações...');
-    
     // Remover qualquer opacidade inicial das seções
     document.querySelectorAll('section').forEach(section => {
         section.style.opacity = '1';
@@ -71,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadProjects();
     loadSkills();
     setupMobileMenu();
-    // setupContactForm();
     setupActiveNavigation();
 });
 
@@ -108,7 +57,6 @@ function setupActiveNavigation() {
 }
 
 // Typing animation for tech stack
-const techStack = ['HTML5/CSS3', 'TailwindCSS', 'JavaScript', 'PHP', 'Laravel', 'MySQL'];
 let currentTechIndex = 0;
 let currentCharIndex = 0;
 let isDeleting = false;
@@ -162,105 +110,22 @@ function setupMobileMenu() {
     });
 }
 
-// Project cards data
-const projects = [
-    {
-        title: 'FastStok',
-        description: 'Sistema de controle de estoque com interface intuitiva e relatórios dinâmicos.',
-        image: 'src/assets/projects/faststok.png',
-        fallbackImage: 'src/assets/projects/default.jpg',
-        tech: ['PHP', 'SQL', 'JavaScript', 'TailwindCSS'],
-        company: 'Autônomo',
-        link: 'https://github.com/3mil1y/faststok.git'
-    },
-    // {
-    //     title: 'Café Pomerano',
-    //     description: 'Site institucional da empresa café pomerano.',
-    //     image: 'src/assets/projects/cafe-pomerano.jpg',
-    //     fallbackImage: 'src/assets/projects/default.jpg',
-    //     tech: ['PHP', 'SQL'],
-    //     company: 'Café Pomerano'
-    // },
-    // {
-    //     title: 'Oh! Rainha',
-    //     description: 'Site institucional da empresa Oh! Rainha.',
-    //     image: 'src/assets/projects/oh-rainha.jpg',
-    //     fallbackImage: 'src/assets/projects/default.jpg',
-    //     tech: ['HTML', 'CSS', 'JavaScript'],
-    //     company: 'Oh! Rainha'
-    // },
-    {
-        title: 'Cantareira Pilates',
-        description: 'Site institucional da empresa Cantareira Pilates.',
-        image: 'src/assets/projects/cantareira.png',
-        fallbackImage: 'src/assets/projects/default.jpg',
-        tech: ['HTML', 'CSS', 'JavaScript'],
-        company: 'Publitiva',
-        link: 'https://cantareirapilates.com.br'
-    },
-    {
-        title: 'Info From Sky',
-        description: 'Site institucional da empresa Info From Sky.',
-        image: 'src/assets/projects/ifsky.png',
-        fallbackImage: 'src/assets/projects/default.jpg',
-        tech: ['HTML', 'CSS', 'JavaScript'],
-        company: 'Publitiva',
-        link: 'https://ifsky.com.br/'
-    },
-    {
-        title: 'Maxx Prêmios',
-        description: 'Site de premiação da empresa Maxx TheraSkin.',
-        image: 'src/assets/projects/maxx.png',
-        fallbackImage: 'src/assets/projects/default.jpg',
-        tech: ['Laravel', 'MySQL', 'TailwindCSS', 'JavaScript'],
-        company: 'Publitiva'
-        // link: 'https://maxxtheraskin.com.br/'
-    },
-    {
-        title: 'NBA Adv',
-        description: 'Site Institucional da Advogada Niver Bosle Acosta.',
-        image: 'src/assets/projects/nba-adv.png',
-        fallbackImage: 'src/assets/projects/default.jpg',
-        tech: ['HTML', 'CSS', 'JavaScript'],
-        company: 'Publitiva | Niver B. Acosta',
-        link: 'https://niverb-acosta.com.br'
-    },
-    {
-        title: 'Niver Concilia',
-        description: 'Site da Advogada Niver Bosle Acosta, focado em acordos de conciliação.',
-        image: 'src/assets/projects/nba-concilia.png',
-        fallbackImage: 'src/assets/projects/default.jpg',
-        tech: ['HTML', 'CSS', 'TailwindCSS', 'JavaScript'],
-        company: 'Publitiva | Niver B. Acosta',
-        link: 'https://niverb-acosta.com.br'
-    },
-    {
-        title: 'NBA Cursos',
-        description: 'Site da Advogada Niver Bosle Acosta, focado em seus cursos de advocacia.',
-        image: 'src/assets/projects/nba-cursos.png',
-        fallbackImage: 'src/assets/projects/default.jpg',
-        tech: ['HTML', 'CSS', 'TailwindCSS', 'JavaScript'],
-        company: 'Publitiva | Niver B. Acosta',
-        link: 'https://niverb-acosta.com.br'
-    }
-];
+// Variáveis globais para o carrossel
+let currentSlide = 0;
+let slideInterval;
+const PROJECTS_PER_PAGE = 9;
+let currentPage = 1;
 
-// Load project cards
-function loadProjects() {
-    const projectsGrid = document.querySelector('.projects-grid');
-    if (!projectsGrid) return;
-    
-    projects.forEach(project => {
-        const projectCard = document.createElement('div');
-        projectCard.className = 'project-card';
-        
-        projectCard.innerHTML = `
+// Função para criar o HTML de um card de projeto
+function createProjectCard(project) {
+    return `
+        <div class="project-card">
             <div class="project-image-container">
                 <img 
-                    src="${project.image}" 
+                    src="src/assets/projects/${project.image}" 
                     alt="${project.title}"
                     class="project-image"
-                    onerror="this.onerror=null; this.src='${project.fallbackImage}'; if(this.src.includes('default.jpg')) this.style.opacity=0.5;"
+                    onerror="this.onerror=null; this.src='src/assets/projects/${project.fallbackImage}'; if(this.src.includes('default.jpg')) this.style.opacity=0.5;"
                 >
                 <div class="project-image-overlay"></div>
             </div>
@@ -283,9 +148,183 @@ function loadProjects() {
                     ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
                 </div>
             </div>
-        `;
+        </div>
+    `;
+}
+
+// Função para renderizar a página atual
+function renderPage(page, projects) {
+    const projectsGrid = document.querySelector('.projects-grid');
+    if (!projectsGrid) return;
+    
+    const start = (page - 1) * PROJECTS_PER_PAGE;
+    const end = start + PROJECTS_PER_PAGE;
+    const paginatedProjects = projects.slice(start, end);
+    
+    projectsGrid.innerHTML = paginatedProjects.map(project => createProjectCard(project)).join('');
+}
+
+// Função para criar a paginação
+function createPagination(totalPages) {
+    const paginationContainer = document.querySelector('.projects-pagination');
+    if (!paginationContainer) return;
+    
+    paginationContainer.innerHTML = '';
+    
+    for (let i = 1; i <= totalPages; i++) {
+        const button = document.createElement('button');
+        button.textContent = i;
+        button.className = `pagination-button ${i === 1 ? 'active' : ''}`;
+        button.addEventListener('click', () => {
+            currentPage = i;
+            renderPage(currentPage, projects);
+            updatePaginationButtons();
+            // Rola até a seção de projetos suavemente
+            document.getElementById('projects').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+        paginationContainer.appendChild(button);
+    }
+}
+
+// Função para atualizar os botões de paginação ativos
+function updatePaginationButtons() {
+    const buttons = document.querySelectorAll('.pagination-button');
+    buttons.forEach((button, index) => {
+        if (index + 1 === currentPage) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    });
+}
+
+// Função para inicializar o carrossel
+function initCarousel() {
+    const track = document.querySelector('.carousel-track');
+    const indicators = document.querySelector('.carousel-indicators');
+    const prevButton = document.querySelector('.carousel-button.prev');
+    const nextButton = document.querySelector('.carousel-button.next');
+    
+    if (!track || !indicators || !prevButton || !nextButton) return;
+    
+    // Criar slides
+    track.innerHTML = projects.map(project => 
+        `<div class="carousel-slide">${createProjectCard(project)}</div>`
+    ).join('');
+    
+    // Criar indicadores
+    indicators.innerHTML = projects.map((_, index) => 
+        `<button class="carousel-indicator ${index === 0 ? 'active' : ''}" data-slide="${index}"></button>`
+    ).join('');
+    
+    // Atualizar slide atual
+    function updateSlide() {
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
         
-        projectsGrid.appendChild(projectCard);
+        // Atualizar indicadores
+        document.querySelectorAll('.carousel-indicator').forEach((indicator, index) => {
+            if (index === currentSlide) {
+                indicator.classList.add('active');
+            } else {
+                indicator.classList.remove('active');
+            }
+        });
+    }
+    
+    // Avançar para o próximo slide
+    function nextSlide() {
+        currentSlide = currentSlide === projects.length - 1 ? 0 : (currentSlide + 1);
+        updateSlide();
+    }
+    
+    // Event listeners
+    prevButton.addEventListener('click', () => {
+        currentSlide = currentSlide === 0 ? projects.length - 1 : (currentSlide - 1);
+        updateSlide();
+        resetInterval();
+    });
+    
+    nextButton.addEventListener('click', () => {
+        nextSlide();
+        resetInterval();
+    });
+    
+    // Navegação pelos indicadores
+    document.querySelectorAll('.carousel-indicator').forEach(indicator => {
+        indicator.addEventListener('click', () => {
+            currentSlide = parseInt(indicator.dataset.slide);
+            updateSlide();
+            resetInterval();
+        });
+    });
+    
+    // Iniciar autoplay
+    function startInterval() {
+        slideInterval = setInterval(nextSlide, 10000); // 10 segundos
+    }
+    
+    function resetInterval() {
+        clearInterval(slideInterval);
+        startInterval();
+    }
+    
+    startInterval();
+    
+    // Pausar autoplay ao passar o mouse
+    const carousel = document.querySelector('.projects-carousel');
+    carousel.addEventListener('mouseenter', () => clearInterval(slideInterval));
+    carousel.addEventListener('mouseleave', startInterval);
+    
+    // Suporte para touch
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    track.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+        clearInterval(slideInterval);
+    }, { passive: true });
+    
+    track.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+        startInterval();
+    }, { passive: true });
+    
+    function handleSwipe() {
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) { // Limite de 50px para considerar um swipe
+            if (diff > 0) {
+                currentSlide = (currentSlide + 1) % projects.length;
+            } else {
+                currentSlide = (currentSlide - 1 + projects.length) % projects.length;
+            }
+            updateSlide();
+        }
+    }
+}
+
+// Load project cards with pagination and carousel
+function loadProjects() {
+    // Renderizar primeira página
+    const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
+    renderPage(currentPage, projects);
+    createPagination(totalPages);
+    
+    // Inicializar carrossel (será escondido em desktop pelo CSS)
+    if (window.innerWidth <= 768) {
+        initCarousel();
+    }
+    
+    // Atualizar ao redimensionar a janela
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 768) {
+            initCarousel();
+        } else {
+            renderPage(currentPage, projects);
+        }
     });
 }
 
@@ -376,82 +415,8 @@ function loadSkills() {
     });
 }
 
-// Contact form handling
-    function setupContactForm() {
-    const form = document.getElementById('contactForm');
-    if (!form) return;
-
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const formData = new FormData(form);
-        
-        try {
-            const response = await fetch(form.action, {
-                method: form.method,
-                body: formData
-            });
-
-            if (response.ok) {
-                console.log('Form submitted successfully');
-                showNotification('Mensagem enviada com sucesso!', 'success');
-                form.reset();
-            } else {
-                throw new Error('Erro no envio');
-            }
-        } catch (error) {
-            console.error('Error submitting form:', error);
-            showNotification('Erro ao enviar mensagem. Tente novamente.', 'error');
-        }
-    });
-}
-
-// setupContactForm();
-
-// Contact form handling
-// function setupContactForm() {
-//     const form = document.getElementById('contactForm');
-//     if (!form) return;
-    
-//     form.addEventListener('submit', async (e) => {
-//         e.preventDefault();
-        
-//         const formData = new FormData(form);
-//         const data = Object.fromEntries(formData);
-        
-//         try {
-//             console.log('Form submitted:', data);
-//             showNotification('Mensagem enviada com sucesso!', 'success');
-//             form.reset();
-//         } catch (error) {
-//             showNotification('Erro ao enviar mensagem. Tente novamente.', 'error');
-//         }
-//     }); 
-// }
-
-// }
-
-// Notification system
-function showNotification(message, type) {
-    const notification = document.createElement('div');
-    notification.className = `notification ${type}`;
-    notification.textContent = message;
-    
-    document.body.appendChild(notification);
-    
-    setTimeout(() => {
-        notification.classList.add('show');
-    }, 100);
-    
-    setTimeout(() => {
-        notification.classList.remove('show');
-        setTimeout(() => {
-            notification.remove();
-        }, 300);
-    }, 3000);
-}
-
 // Smooth scroll for navigation links
+// This code will run when the script loads
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();

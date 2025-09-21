@@ -16,7 +16,7 @@
             <li><a href="#about">Sobre</a></li>
             <li><a href="#projects">Projetos</a></li>
             <li><a href="#expertise">Expertise</a></li>
-            <li><a href="#case-study">Estudo de Caso</a></li>
+            <!-- <li><a href="#case-study">Estudo de Caso</a></li> -->
             <li><a href="#contact">Contato</a></li>
         </ul>
         <div class="menu-btn">
@@ -43,7 +43,7 @@
             <h2 class="purple-title">Quem Sou Eu</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Desenvolvedora Web Full Stack, com foco em Back-End apaixonada por construir soluções modernas e eficientes.</p>
+                    <p>Desenvolvedora Web Full Stack, apaixonada por construir soluções modernas e eficientes.</p>
                     <p>Minha missão é criar experiências digitais de alta qualidade que atendam às necessidades de usuários e empresas.</p>
                 </div>
                 <div class="skills-container">
@@ -58,17 +58,17 @@
                 <div class="form-exp-card">
                     <div class="form-exp-header">
                         <h3>Formação Acadêmica</h3>
-                        <p class="form-exp-start"><strong>Tecnólogo em Sistemas de Informação para Internet</strong> – IFES (2022 – 2025)</p>
+                        <p class="form-exp-start"><strong>Tecnólogo em Sistemas de Informação para Internet</strong> – IFES (01/2022 – 08/2025)</p>
                     </div>
                     <span class="form-exp-line"></span>
                     <div class="form-exp-body">
-                        <p>Atualmente no 6º período, com previsão de conclusão em 07/2025. A graduação é focada em desenvolvimento web, arquitetura de software e boas práticas de programação.</p>
+                        <p>Atualmente concluído. A graduação é focada em desenvolvimento web, arquitetura de software e boas práticas de programação.</p>
                     </div>
                 </div>
                 <div class="form-exp-card">
                     <div class="form-exp-header">
                         <h3>Experiência Profissional</h3>
-                        <p class="form-exp-start"><strong>Desenvolvedora Web</strong> – Desde 2023</p>
+                        <p class="form-exp-start"><strong>Desenvolvedora Web Full Stack</strong> – Desde 2023</p>
                     </div>
                     <span class="form-exp-line"></span>
                     <div class="form-exp-body">
@@ -79,10 +79,36 @@
         </div>
         </section>
 
+        <link rel="stylesheet" href="src/css/carousel.css">
         <section id="projects" class="projects">
             <h2>Projetos Desenvolvidos</h2>
+            
+            <!-- Grid para desktop -->
             <div class="projects-grid">
                 <!-- Project cards will be populated by JavaScript -->
+            </div>
+            
+            <!-- Carrossel para mobile -->
+            <div class="projects-carousel">
+                <button class="carousel-button prev" aria-label="Anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-track">
+                    <!-- Slides serão inseridos pelo JavaScript -->
+                </div>
+                <button class="carousel-button next" aria-label="Próximo">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="carousel-indicators">
+                    <!-- Indicadores serão inseridos pelo JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Paginação para desktop -->
+            <div class="pagination-desktop">
+                <div class="projects-pagination">
+                    <!-- Botões de paginação serão inseridos pelo JavaScript -->
+                </div>
             </div>
         </section>
 
@@ -92,7 +118,7 @@
                 <div class="expertise-card">
                     <i class="fas fa-code"></i>
                     <h3>Tecnologias Modernas</h3>
-                    <p>PHP, SQL, TailwindCSS e mais</p>
+                    <p>Laravel, Vue.js, TypeScript e mais</p>
                 </div>
                 <div class="expertise-card">
                     <i class="fas fa-cogs"></i>
@@ -106,105 +132,40 @@
                 </div>
             </div>
         </section>
-
-        <section id="case-study" class="case-study">
-            <h2>Estudo de Caso</h2>
-            <div class="case-study-content">
-                <div class="case-study-header">
-                    <h3>📦 FastStok – WMS simples e acessível</h3>
-                    <p class="case-study-subtitle">Sistema criado para pequenos e médios comércios, focado em otimizar o controle de estoque e a gestão de armazéns, com interface leve e responsiva para tablets e celulares.</p>
+        
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Entre em Contato</h2>
+                <p class="contact-subtitle">Vamos trabalhar juntos! Estou disponível para novos projetos e oportunidades.</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <a href="mailto:emillywaiandt@gmail.com" class="contact-link">emillywaiandt@gmail.com</a>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/3mil1y" target="_blank" class="contact-link">github.com/3mil1y</a>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/emilly-waiandt" target="_blank" class="contact-link">in/emilly-waiandt</a>
+                    </div>
                 </div>
                 
-                <div class="case-study-details">
-                    <div class="case-study-tech">
-                        <h4>Tecnologias Utilizadas</h4>
-                        <ul>
-                            <li>PHP puro</li>
-                            <li>SQL</li>
-                            <li>JavaScript</li>
-                            <li>TailwindCSS</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="case-study-features">
-                        <h4>✨ Principais funcionalidades</h4>
-                        <ul>
-                            <li>Cadastro e edição de produtos com campos personalizados</li>
-                            <li>Gestão de endereços de armazenagem, facilitando a organização do estoque</li>
-                            <li>Controle de movimentações de entrada e saída de estoque em tempo real</li>
-                            <li>Relatórios dinâmicos, auxiliando na tomada de decisões</li>
-                            <li>Interface responsiva e leve, ideal para dispositivos móveis</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="case-study-architecture">
-                    <h4>🧱 Arquitetura com padrão MVCE</h4>
-                    <p>
-                        Para este projeto, optei por implementar manualmente o padrão MVCE (Model-View-Controller-Entity), sem utilizar frameworks prontos. Esta escolha me deu controle total sobre a estrutura da aplicação e proporcionou um aprendizado profundo sobre arquitetura de software.
-                    </p>
-                    
-                    <div class="architecture-benefits">
-                        <h5>Essa implementação manual permitiu:</h5>
-                        <ul>
-                            <li>Separar responsabilidades de forma clara e escalável</li>
-                            <li>Compreender na prática o fluxo entre modelos, controladores, views e entidades</li>
-                            <li>Evitar dependências externas, garantindo maior domínio sobre o código</li>
-                            <li>Criar uma base sólida e de fácil manutenção para futuras melhorias</li>
-                        </ul>
-                    </div>
-                    <p class="case-study-conclusion">
-                        Este projeto demonstra minha capacidade de criar soluções robustas e bem estruturadas, mesmo começando do zero, aplicando boas práticas de desenvolvimento e arquitetura limpa, com foco na gestão eficiente de armazém.    
-                    </p>
-                </div>
-
-                <!-- <section id="testimonials" class="testimonials">
-            <h2>O Que Dizem Sobre Mim</h2>
-            <div class="testimonials-slider">
-                <div class="testimonial">
-                    <p>"Emilly é uma profissional incrível. O sistema de estoque que ela desenvolveu para nós 
-                    trouxe uma eficiência sem igual."</p>
-                    <cite>- Nater Coop</cite>
-                </div>
-                <div class="testimonial">
-                    <p>"Profissional incrível, sempre pronta para ajudar e resolver problemas. Recomendo a 
-                    todos que buscam um desenvolvedor de qualidade."</p>
-                    <cite>- Oh! Rainha</cite> -->
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <h2>Entre em Contato</h2>
-            <div class="contact-container">
-            <form id="contactForm" action="https://formsubmit.co/emillywaiandt@gmail.com" method="POST" class="contact-form">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder=" " required>
-                    <label for="name">Nome</label>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder=" " required>
-                    <label for="email">E-mail</label>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" name="message" placeholder=" " required></textarea>
-                    <label for="message">Mensagem</label>
-                </div>
-            
-                <!-- Opcional: Desativar CAPTCHA -->
-<!--                 <input type="hidden" name="_captcha" value="false"> -->
-            
-                <!-- Opcional: Redirecionamento pós-envio -->
-<!--                 <input type="hidden" name="_next" value="https://seusite.com/obrigado.html"> -->
-            
-                <button type="submit" class="btn primary">Enviar Mensagem</button>
-            </form>
-
-                <div class="contact-info">
-                    <div class="social-links">
-                        <a href="mailto:emillywaiandt@gmail.com"><i class="fas fa-envelope"></i></a>
-                        <a href="https://github.com/3mil1y" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/emilly-waiandt" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    </div>
+                <div class="contact-note">
+                    <p>Estou aberta a novas oportunidades e adoraria ouvir sobre seu projeto. Sinta-se à vontade para entrar em contato!</p>
                 </div>
             </div>
         </section>
@@ -217,10 +178,10 @@
                 <a href="https://github.com/3mil1y" target="_blank">GitHub</a>
                 <a href="https://www.linkedin.com/in/emilly-waiandt" target="_blank">LinkedIn</a>
             </div>
-            <p>&copy; 2024 Emilly Waiandt. Todos os direitos reservados.</p>
+            <p>&copy; 2025 Emilly Waiandt. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script src="src/js/main.js"></script>
+    <script type="module" src="src/js/main.js"></script>
 </body>
 </html> 
